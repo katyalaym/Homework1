@@ -9,7 +9,7 @@ public final class SteamCounter {
 	public static void main(String [] args) throws FileNotFoundException{
 		
 		String text="";
-		File orgnlFile = new File("текстовыйфайл.txt");
+		File orgnlFile = new File("ГІГҐГЄГ±ГІГ®ГўГ»Г©ГґГ Г©Г«.txt");
 		Scanner intext = new Scanner(orgnlFile);
 		while(intext.hasNext())
 			text += intext.nextLine() + "\r\n";
