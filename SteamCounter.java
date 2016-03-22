@@ -1,0 +1,29 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+
+public final class SteamCounter {
+	public static void main(String [] args) throws FileNotFoundException{
+		
+		String text="";
+		File orgnlFile = new File("עוךסעמגûיפאיכ.txt");
+		Scanner intext = new Scanner(orgnlFile);
+		while(intext.hasNext())
+			text += intext.nextLine() + "\r\n";
+		
+		Pattern p = Pattern.compile("\\s[A-Z]{1}[a-z0-9]+[a-z]{1}\\s");
+		Matcher m = p.matcher(text);
+		
+		int numberOfPairs=0;
+		while( m.find()){
+			numberOfPairs++;
+		}
+		
+		System.out.print("Number of right pairs = " + numberOfPairs + "\n");
+
+	}
+
+}
